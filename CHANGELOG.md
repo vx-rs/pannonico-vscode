@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.2.0
+
+- Released the VSIX and its pinned language-server dependency under the same
+  editor-track version.
+- Added signed-tag and GitHub Release provenance for the dedicated
+  `pannonico-vscode` repository.
+- Made Visual Studio Marketplace publication a manual upload of the exact
+  verified GitHub VSIX, followed by credential-free public package auditing.
+
 ## 0.1.1
 
 - Moved versioned VSIX release assets to the dedicated `pannonico-vscode`
