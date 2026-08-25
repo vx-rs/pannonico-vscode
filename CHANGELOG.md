@@ -2,8 +2,8 @@
 
 ## 0.2.0
 
-- Released the VSIX and its pinned language-server dependency under the same
-  editor-track version.
+- Released the independently versioned VSIX with an exact pinned language-server
+  dependency.
 - Added signed-tag and GitHub Release provenance for the dedicated
   `pannonico-vscode` repository.
 - Made Visual Studio Marketplace publication a manual upload of the exact
