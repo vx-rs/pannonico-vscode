@@ -9,7 +9,7 @@ process owns one project's indexing and template semantics.
 
 ## Requirements
 
-- VS Code 1.91 or newer
+- VS Code 1.100 or newer for the current source build and next VSIX release
 - [WASM WASI Core](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wasm-wasi-core)
 - A trusted, file-backed local workspace or Remote-WSL workspace
 - A regular `pannonico.yaml` or `.pannonico` project marker, unless the project
@@ -17,6 +17,10 @@ process owns one project's indexing and template semantics.
 
 Remote-SSH, Dev Containers, Codespaces, other remote providers, Restricted
 Mode, virtual workspaces, and VS Code for the Web are not supported.
+
+Published VSIX 0.2.0 retains its historical VS Code 1.91 minimum. The 1.100
+minimum applies to the future ESM extension source and its next release; it does
+not retroactively change the 0.2.0 contract.
 
 ## Install
 
