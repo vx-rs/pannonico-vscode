@@ -2,6 +2,8 @@
 
 ## 0.3.3
 
+- Advanced directly from 0.2.0 to 0.3.3 to align the public version with the
+  independently released CLI and LSP tracks.
 - Selected the exact Pannonico LSP 0.3.3 release while keeping the LSP module
   outside the VSIX.
 - Added completion, hover, unique-source definitions, and definite saved-file
