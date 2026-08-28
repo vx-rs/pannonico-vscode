@@ -1,5 +1,16 @@
 # Changelog
 
+## 0.3.3
+
+- Selected the exact Pannonico LSP 0.3.3 release while keeping the LSP module
+  outside the VSIX.
+- Added completion, hover, unique-source definitions, and definite saved-file
+  diagnostics for standalone partials reached through calls that forward the
+  unchanged root context. Mixed, replaced, unknown, and unreachable contexts
+  remain suppressed.
+- Raised the current extension requirement to VS Code 1.100. The published
+  0.2.0 VSIX retains its historical VS Code 1.91 minimum.
+
 ## 0.2.0
 
 - Released the independently versioned VSIX with an exact pinned language-server
