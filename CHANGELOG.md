@@ -1,5 +1,17 @@
 # Changelog
 
+## 0.4.0
+
+- Aligned the extension with the independently released CLI and LSP 0.4.0
+  tracks.
+- Selected the exact Pannonico LSP 0.4.0 release while keeping the LSP module
+  outside the VSIX.
+- Retained the VS Code 1.100 minimum and the existing completion, hover,
+  definition, and saved-workspace diagnostic contract.
+- Replaced checked-in version-specific release-note files with GitHub-generated
+  release descriptions while retaining this packaged changelog as the
+  maintained extension history.
+
 ## 0.3.3
 
 - Advanced directly from 0.2.0 to 0.3.3 to align the public version with the
