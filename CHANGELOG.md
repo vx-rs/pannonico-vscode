@@ -1,5 +1,14 @@
 # Changelog
 
+## Unreleased
+
+## 0.5.0
+
+- Selects and verifies the native Pannonico LSP artifact for the workspace
+  Extension Host on macOS, Linux, and Windows, for x64 and arm64.
+- Removes the WASM WASI Core dependency and adds Remote-SSH and Dev Container
+  workspace support alongside local and Remote-WSL windows.
+
 ## 0.4.0
 
 - Aligned the extension with the independently released CLI and LSP 0.4.0
