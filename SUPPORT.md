@@ -6,9 +6,9 @@ before opening a new one.
 
 Include:
 
-- Pannonico extension and VS Code versions;
+- Pannonico extension, VS Code, and WASM WASI Core versions;
 - operating system, architecture, and whether the workspace is local or
-  Remote-WSL, Remote-SSH, or Dev Containers;
+  local, Remote-WSL, Remote-SSH, or Dev Container;
 - the project marker in use (`pannonico.yaml` or `.pannonico`);
 - minimal reproduction steps, expected behavior, and actual behavior;
 - relevant Pannonico Output-channel logs with credentials, personal data,
