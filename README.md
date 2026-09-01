@@ -9,17 +9,18 @@ process owns one project's indexing and template semantics.
 
 ## Requirements
 
-- VS Code 1.100 or newer for VSIX 0.3.3
+- VS Code 1.100 or newer for the current VSIX
 - [WASM WASI Core](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wasm-wasi-core)
-- A trusted, file-backed local workspace or Remote-WSL workspace
+- A trusted, file-backed local, Remote-WSL, Remote-SSH, or Dev Container workspace
 - A regular `pannonico.yaml` or `.pannonico` project marker, unless the project
   is selected manually
 
-Remote-SSH, Dev Containers, Codespaces, other remote providers, Restricted
-Mode, virtual workspaces, and VS Code for the Web are not supported.
+Codespaces, other remote providers, Restricted Mode, virtual workspaces, and VS
+Code for the Web are not supported.
 
 Published VSIX 0.2.0 retains its historical VS Code 1.91 minimum. VSIX 0.3.3
-requires VS Code 1.100. This does not retroactively change the 0.2.0 contract.
+and later require VS Code 1.100. This does not retroactively change the 0.2.0
+contract.
 
 ## Install
 
@@ -29,8 +30,8 @@ Core extension is declared as a dependency.
 
 For an exact-byte fallback, download `pannonico.vsix` from the matching
 [`vx-rs/pannonico-vscode` GitHub Release](https://github.com/vx-rs/pannonico-vscode/releases)
-and install it with **Extensions: Install from VSIX...**. In Remote-WSL, install
-both Pannonico and WASI Core in the WSL extension group.
+and install it with **Extensions: Install from VSIX...**. In maintained remote
+windows, install both Pannonico and WASI Core in the workspace extension group.
 
 The extension and its VSIX contain no language-server WASM or GitHub
 credentials. The pinned module is downloaded from the immutable
@@ -86,20 +87,20 @@ definite saved-file failures. Pannonico does not add a custom decoration
 provider. Unsaved template text takes precedence over saved direct-path
 findings until it is saved.
 
-## Remote-WSL
+## Remote workspaces
 
-Open the project through `WSL: Open Folder in WSL`. Confirm Pannonico and WASI
-Core are installed in the WSL extension group and run in the remote workspace
-Extension Host. The selected Linux workspace remains a `file` URI inside that
-host.
+Open the project through Remote-WSL, Remote-SSH, or Dev Containers. Confirm
+Pannonico and WASI Core are installed in the remote extension group and run in
+the workspace Extension Host. The selected workspace remains a `file` URI
+inside that host.
 
-If startup reports an unsupported environment, confirm the window is connected
-to WSL, the workspace is trusted and file-backed, and both extensions run on
-the WSL side.
+If startup reports an unsupported environment, confirm the intended remote is
+connected, the workspace is trusted and file-backed, and both extensions run
+on the remote side.
 
 ## Current limits
 
-- Trusted local and Remote-WSL file workspaces only
+- Trusted local, Remote-WSL, Remote-SSH, and Dev Container file workspaces only
 - One WASI process per project root
 - No general Go-template interpretation
 - No remote-data fetch in the IDE path

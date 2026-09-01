@@ -1,5 +1,14 @@
 # Changelog
 
+## 0.5.0
+
+- Restored the canonical `pannonico-lsp.wasm` runtime through the required WASM
+  WASI Core extension and removed native editor-LSP selection.
+- Added exact WASM acquisition, cache verification, and selected-root URI
+  translation for local, Remote-WSL, Remote-SSH, and Dev Container workspaces.
+- Added automated source and installed-VSIX acceptance for project lifecycle,
+  language features, multi-project ownership, and clean shutdown.
+
 ## 0.4.0
 
 - Aligned the extension with the independently released CLI and LSP 0.4.0
