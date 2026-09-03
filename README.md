@@ -54,6 +54,16 @@ direct marked parent.
 Use the Pannonico Output channel for release identity, project roots, session
 identity, timings, diagnostics, and lifecycle errors.
 
+## Completion
+
+Template data completion in VS Code:
+
+![Pannonico template completion in VS Code](media/vscode-pannonico-template.png)
+
+Built-in Pannonico metadata completion in a Vite template:
+
+![Pannonico metadata completion in a Vite template](media/vscode-pannonico-vite.png)
+
 ## Commands
 
 - `Pannonico: Start Language Server`
