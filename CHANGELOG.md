@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.1
+
+- Fixed native Windows project startup when workspace and marker URIs expose
+  different drive-letter casing for the same directory.
+
 ## 0.5.0
 
 - Restored the canonical `pannonico-lsp.wasm` runtime through the required WASM
