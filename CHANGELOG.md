@@ -1,5 +1,10 @@
 # Changelog
 
+## 0.5.2
+
+- Selects the language-server patch that ignores Pannonico-like source inside
+  Markdown code and `pannonico-verbatim` wrappers.
+
 ## 0.5.1
 
 - Fixed native Windows project startup when workspace and marker URIs expose

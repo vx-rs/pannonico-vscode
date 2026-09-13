@@ -85,6 +85,19 @@ the scalar-free `.nav` hierarchy. Navigation completion covers `current`,
 `parent`, and `tree`, including directory and page identities, page metadata,
 parent chains, and referenced-page frontmatter.
 
+Inside `{{template "shell/header"}}`, completion offers discovered partial
+directories and names as soon as you type the opening quote. Hover explains the
+selected reference and its source. The same assistance covers layout selectors,
+`get`/`has` dotted keys, `index` exact keys, `pageIs` page names, `t` fallback
+languages, and `date` format tokens. Layout selectors work in page frontmatter
+and `templates.defaultLayout` configuration, including plain YAML scalars.
+
+Markdown inline, fenced, and indented code remains literal documentation, so
+the extension does not show template completion, hover, definitions, or
+diagnostics inside it. The same applies inside an HTML wrapper marked with
+`pannonico-verbatim`. Language features resume in live source after the
+literal region.
+
 Direct navigation links use `tree.c` for directories and `tree.p` for pages:
 
 ```html
@@ -95,7 +108,11 @@ Direct navigation links use `tree.c` for directories and `tree.p` for pages:
 VS Code's normal Problems collection and Explorer problem decorations show
 definite saved-file failures. Pannonico does not add a custom decoration
 provider. Unsaved template text takes precedence over saved direct-path
-findings until it is saved.
+findings until it is saved. YAML/JSON inputs also synchronize with the server.
+Configuration, data, frontmatter and template syntax errors appear even when
+the project cannot load. Hover an underline to read the compiler explanation;
+save the correction to clear it. CLI/MCP builds check rendered HTML and other
+execution-dependent errors that editor indexing does not evaluate.
 
 ## Remote workspaces
 
@@ -114,8 +131,8 @@ on the remote side.
 - One WASI process per project root
 - No general Go-template interpretation
 - No remote-data fetch in the IDE path
-- No partial completion when any reachable call replaces dot or caller context
-  is otherwise unknown
+- No object-key completion in a partial when its caller context is unknown;
+  partial-name completion remains available
 - No automatic LSP release discovery
 
 ## License
