@@ -1,9 +1,14 @@
 # Changelog
 
-## 0.5.2
+## 0.6.0
 
-- Selects the language-server patch that ignores Pannonico-like source inside
-  Markdown code and `pannonico-verbatim` wrappers.
+- Selects Pannonico LSP 0.6.0 with completion and hover for project references,
+  synchronized YAML and JSON inputs, and compiler diagnostics that remain
+  available when a project cannot finish loading.
+- Ignores Pannonico-like source inside Markdown code and
+  `pannonico-verbatim` wrappers while retaining language features in live
+  source.
+- Preserves the reviewed README bytes in the packaged VSIX.
 
 ## 0.5.1
 
