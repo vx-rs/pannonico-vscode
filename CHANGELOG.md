@@ -1,5 +1,12 @@
 # Changelog
 
+## 0.7.0
+
+- Selects Pannonico LSP 0.7.0 with the WASI stdin fix for idle sessions and
+  document close/reopen.
+- Requires the current VS Code 1.144.x generation and uses matching API types.
+  Previously published VSIX files retain their original compatibility ranges.
+
 ## 0.6.0
 
 - Selects Pannonico LSP 0.6.0 with completion and hover for project references,
