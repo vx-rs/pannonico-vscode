@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.2
+
+- Select Pannonico LSP 0.7.1, which preserves saved compiler diagnostics after
+  equivalent or delayed full-text synchronization.
+- Retain VS Code 1.144.0 as the minimum and allow newer 1.x hosts.
+
 ## 0.7.1
 
 - Permit newer VS Code 1.x minor and patch versions while retaining the
