@@ -9,7 +9,7 @@ process owns one project's indexing and template semantics.
 
 ## Requirements
 
-- VS Code 1.144.x for the current VSIX
+- VS Code 1.144.0 or a newer 1.x version
 - [WASM WASI Core](https://marketplace.visualstudio.com/items?itemName=ms-vscode.wasm-wasi-core)
 - A trusted, file-backed local, Remote-WSL, Remote-SSH, or Dev Container workspace
 - A regular `pannonico.yaml` or `.pannonico` project marker, unless the project
@@ -18,9 +18,12 @@ process owns one project's indexing and template semantics.
 Codespaces, other remote providers, Restricted Mode, virtual workspaces, and VS
 Code for the Web are not supported.
 
-The current VSIX supports the VS Code 1.144 generation. Previously published
-VSIX files retain their original compatibility ranges. Development uses the
-1.144.0 API types and tests on the actual 1.144.0 runtime.
+The VSIX keeps its 1.144.0 minimum and permits newer minor and patch versions
+within VS Code 1.x. Compatibility with those updates is maintained on a
+best-effort basis; report observed failures through the issue tracker.
+Previously published VSIX files retain their original compatibility ranges.
+Development uses the 1.144.0 API types. Acceptance covers the 1.144.0 baseline
+and the 1.145.0 host that exposed the former minor-version ceiling.
 
 ## Install
 

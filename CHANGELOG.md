@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.7.1
+
+- Permit newer VS Code 1.x minor and patch versions while retaining the
+  1.144.0 minimum. The former 1.144.x range rejected VS Code 1.145.0.
+- Keep Pannonico LSP 0.7.0 and the existing runtime dependencies unchanged.
+
 ## 0.7.0
 
 - Selects Pannonico LSP 0.7.0 with the WASI stdin fix for idle sessions and
