@@ -1,9 +1,10 @@
 # Pannonico for VS Code
 
-Pannonico provides template completion, hover, definitions, and conservative
-diagnostics through a pinned Go/WASI language server. The extension discovers
-projects and owns VS Code and WASI lifecycle integration. Each language-server
-process owns one project's indexing and template semantics.
+Use Pannonico to complete template names, inspect data and layout references,
+and jump to definitions in VS Code. The extension finds Pannonico projects
+in the workspace and starts a separate copy of its pinned WASI language
+server for each project. Each server indexes that project's files and reports
+diagnostics for it.
 
 > **Pre-1.0 development notice:** Pannonico is under active development. Until version 1.0.0, public contracts and user-visible behavior may change between releases. Expect breaking changes while the program and distribution model are being stabilized.
 
@@ -43,10 +44,10 @@ when a project first needs it.
 
 ## Language-server runtime
 
-The extension downloads only when a detected project needs the pinned release
-and no valid cached module exists. It verifies the committed release target,
-byte size, SHA-256 digest, and WASM bytes before atomically installing the module
-in extension global storage. Each new project session revalidates the cached
+When a project starts, the extension checks its copy of the pinned module.
+If that copy is missing or fails verification, VS Code downloads the matching
+release. The extension checks the target, size, digest, and WASM format before
+moving the module into extension storage. Each new project revalidates the cached
 module's file type, size, SHA-256 digest, and WASM bytes before use.
 
 Each marked project receives an isolated language-server process. Sibling and
