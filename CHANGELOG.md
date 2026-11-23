@@ -1,5 +1,11 @@
 # Changelog
 
+## 0.8.0
+
+- Select Pannonico LSP 0.8.0.
+- Package the extension with VSCE 4.1.1. The extension still supports
+  VS Code 1.x starting at 1.144.0.
+
 ## 0.7.2
 
 - Select Pannonico LSP 0.7.1, which preserves saved compiler diagnostics after
